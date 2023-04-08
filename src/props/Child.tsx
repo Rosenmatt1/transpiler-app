@@ -4,10 +4,16 @@ interface ChildProps {
   children?: React.ReactNode;
 }
 
+//In this approach children will need to be in the interface
 // export const Child = ({ color }: ChildProps) => {
 //   return <div>Hi there?</div>
 // }
 
-export const Child: React.FC<ChildProps> = ({ color }) => {
-  return <div> {color} </div>
+
+//this syntax automatically accepts children 
+export const Child: React.FC<ChildProps> = ({ color, onClick, children }) => {
+  return <div> 
+    {color} 
+    <button onClick={onClick}> Click me</button>
+    </div>
 }
