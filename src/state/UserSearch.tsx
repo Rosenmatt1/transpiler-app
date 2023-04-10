@@ -15,10 +15,8 @@ const UserSearch: React.FC = () => {
     const foundUser = users.find((user) => {
       return user.name === name
     })
-
     setUser(foundUser)
   }
-
 
   return <div>
     UserSearch
